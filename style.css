@@ -1,0 +1,164 @@
+/* 🌎 General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 📌 Main Container */
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📝 Fixed Width &  Textarea */
+input, textarea {
+    width: 80%; 
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 📜 Textarea */
+textarea {
+    height: 120px;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+/* 🔘 Buttons */
+button {
+    width: 40%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
+
+#save-note { background: #28a745; color: white; }
+#clear-notes { background: #dc3545; color: white; }
+#toggle-dark-mode { background: #222; color: white; }
+
+/* 📌 Notes List */
+ul { list-style: none; padding: 0; }
+
+.note-item {
+    background: #f9f9f9;
+    padding: 12px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-item:hover { background: #e0e0e0; }
+
+/* ❌ Delete Button */
+.delete-btn {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: rgb(255, 0, 0);
+    transform: scale(1.1);
+    color: #333;
+}
+
+
+/* 🌑 Dark Mode */
+.dark-mode { background: #222; color: white; }
+.dark-mode .container { background: #333; }
+.dark-mode .note-item { background: #444; color: white; }
+.dark-mode .note-item:hover { background: #555; }
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .container { width: 90%; padding: 15px; }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 1000px;
+}
+.modal-content {
+    text-align: center;
+    font-size: 22px;
+}
+#modal-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+#modal-date {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 10px;
+    display: block;
+}
+#modal-body {
+    max-height: 800px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    text-align: left;
+}
+#close-modal {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
